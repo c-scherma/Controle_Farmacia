@@ -1,4 +1,4 @@
-Cadastrar laboratório
+Cadastrar laboratório (Sequencia e atividades)
 
 Sumário: Funcionário cadastra laboratório no sistema
 
@@ -9,57 +9,69 @@ Précondições: Funcionário possuir login/senha e estar logado no sistema.
 Fluxo Principal:
 1.	Funcionário acessa opção para cadastro de fornecedor/laboratório
 2.	Sistema apresenta formulario de cadastro.
-3.	Funcionário informa número do CNPJ, endereço físico e eletrônico, contato telefônico, nome dos representantes, telefone dos representantes.
-4.	Sistema valida cnpj, numero telefonico de contato e dos representantes e se todos os campos obrigatórios estão preenhidos.
+3.	Funcionário informa número do CNPJ, endereço físico e eletrônico, contato 
+telefônico, nome dos representantes, telefone dos representantes.
+4.	Sistema valida cnpj, numero telefonico de contato e dos representantes e se
+todos os campos obrigatórios estão preenhidos.
 5.	Sistema cadastra fornecedor/laboratório no banco de dados.
 6.  Sistema informa sucesso no cadastro.
 11.	Cliente confirma sucesso e caso de uso termina.
 
 Fluxo Alternativo (2): O Funcionário cancela a operação.
-A1. O Funcionário desiste de cadastrar o fornecedor/laboratório, para isso cancela a operação e caso de uso termina.
+A1. O Funcionário desiste de cadastrar o fornecedor/laboratório, para isso 
+cancela a operação e caso de uso termina.
 
-Fluxo Alternativo (11): O Funcionário deseja cadastrar mais fornecedores/laboratórios.
-B1. O Funcionário deseja cadastrar mais um Fornecedor/Laboratório, para isso escolhe a opção de continuar cadastrando e caso de uso reinicia.
+Fluxo Alternativo (11): O Funcionário deseja cadastrar mais fornecedores/
+laboratórios.
+B1. O Funcionário deseja cadastrar mais um Fornecedor/Laboratório, para isso 
+escolhe a opção de continuar cadastrando e caso de uso reinicia.
 
 Fluxo de Exceção (4): Dados inconsistentes.
-C1. O sistema reporta o fato para o Funcionário e retorna ao passo 2 mantendo os dados preenchidos.
+C1. O sistema reporta o fato para o Funcionário e retorna ao passo 2 mantendo 
+os dados preenchidos.
 
 Fluxo de Exceção (6): Falha ao cadastrar.
-D1. O sistema reporta o fato para o Funcionário e retorna ao passo 2 mantendo os dados preenchidos.
+D1. O sistema reporta o fato para o Funcionário e retorna ao passo 2 mantendo 
+os dados preenchidos.
 
 /*
-  --------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
 */
 
-Liberar venda de medicamento
+Liberar venda de medicamento (Sequencia e atividades)
 
 Sumário: Gerente libera venda de medicamento controlado
 
 Atores: Gerente
 
-Précondições: Gerente possuir login/senha e estar logado no sistema. Pedido de venda de medicamento controlado já realizado.
+Précondições: Gerente possuir login/senha e estar logado no sistema. Pedido de 
+venda de medicamento controlado já realizado.
 
 Fluxo Principal:
 1.  Gerente acessa opção para liberar venda de medicamento controlado.
 2.  Sistema exibe lista com todos pedidos de venda pendentes de autorização.
 3. 	Gerente seleciona pedido a ser autorizado.
-4.  Sistema exibe dados do pedido de venda e solicita confirmação do CPF do Cliente, CRM do Médico e Código de barras do medicamento.
-5.  Gerente preenche dados solicitados e faz leitura do codigo de barras do medicamento.
+4.  Sistema exibe dados do pedido de venda e solicita confirmação do CPF do 
+Cliente, CRM do Médico e Código de barras do medicamento.
+5.  Gerente preenche dados solicitados e faz leitura do codigo de barras do 
+medicamento.
 6.  Sistema valida os dados inseridos.
 7.  Sistema marca pedido de venda como autorizado e caso de uso termina.
 
 Fluxo Alternativo (3): Gerente cancela operação
-A1.  O Gerente desiste de liberar a venda do medicamento, para isso cancela a operação e caso de uso termina.
+A1.  O Gerente desiste de liberar a venda do medicamento, para isso cancela a 
+operação e caso de uso termina.
 
 Fluxo de Exceção (6): Dados inconsistentes
-B1.  O sistema reporta fato para o Gerente e retorna ao passo 4 mantendo os dados preenchidos.
+B1.  O sistema reporta fato para o Gerente e retorna ao passo 4 mantendo os 
+dados preenchidos.
 
 /*
-  --------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
 */
 
-Emitir relatório pagamento de pecúnia
-
+Emitir relatório pagamento de pecúnia (Sequencia e atividades)
+ 
 Sumário: Funcionário gera relatorio de valores recebidos em pecúnia
 
 Atores: Funcionario
@@ -67,18 +79,35 @@ Atores: Funcionario
 Précondições: Funcionário possuir login/senha e estar logado no sistema. 
 
 Fluxo Principal:
-1.  Funcionário acessa opção para emitir relatório de valores recebidos em pecúnia.
+1.  Funcionário acessa opção para emitir relatório de valores recebidos em 
+pecúnia.
 2.  Funcionário seleciona relatorio sem filtro ou filtrado por data.
-3.  Sistema busca na base de dados todos os pedidos fechados com forma de pagamento pecúnio respeitando o filtro selecionado.
-4.  Sistema gera relatorio em arquivo .pdf com o resultado da busca e exibe em tela.
+3.  Sistema busca na base de dados todos os pedidos fechados com forma de 
+pagamento pecúnio respeitando o filtro selecionado.
+4.  Sistema gera relatorio em arquivo .pdf com o resultado da busca e exibe em 
+tela.
 5.  Funcionário imprime relatorio e caso de uso termina.
 
 Fluxo Alternativo (2): Funcionário cancela a operação
-A1.  O Funcionário desiste de gerar o relatorio, para isso cancela a operação e caso de uso termina.
+A1.  O Funcionário desiste de gerar o relatorio, para isso cancela a operação e
+caso de uso termina.
 
 Fluxo Alternativo (5): Funcionário não deseja imprimir.
-B1.  O Funcionário não deseja imprimeir o resultado, somente visualiza-lo. Para isso cancela a impressão e caso de uso termina.
+B1.  O Funcionário não deseja imprimeir o resultado, somente visualiza-lo. Para
+isso cancela a impressão e caso de uso termina.
 
 /*
-  --------------------------------------------------------------------------------------------
+  -----------------------------------------------------------------------------
+*/
+
+Pagar boletos
+
+/*
+  -----------------------------------------------------------------------------
+*/
+
+Emitir relatório mais vendidos
+
+/*
+  -----------------------------------------------------------------------------
 */
