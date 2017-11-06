@@ -102,11 +102,62 @@ isso cancela a impressão e caso de uso termina.
 
 Pagar boletos
 
+Sumário: Funcionário registra no sistema o pagamento de um boleto
+
+Atores: Funcionário
+
+Précondições: Funcionário possuir login/senha, funcionario estar logado no 
+sistema e boleto estar com status de pagamento pendente.
+
+Fluxo Principal:
+1. Funcionário acessa opção para registrar pagamento de boleto.
+2. Funcionário entra com o numero do boleto a ser pago, manualmente ou por 
+leitor de codigo de barras.
+3. Sistema busca na base de dados boleto a ser pago baseado no numero digitado e
+exibe resultado na tela.
+4. Funcionário marca boleto como pago, anexa comprovante de pagamento e salva 
+alterações.
+5. Sistema registra no banco de dados a data do pagamento e o comprovante e caso
+de uso termina.
+
+Fluxo Alternativo (3): Funcionario cancela operação
+A1. O funcionário desiste de registrar pagamento de boleto, para isso cancela a 
+operação e caso de uso termina.
+
+Fluxo Exceção (3): Boleto não encontrado
+B1. O sistema reporta fato para o funcionário e retorna ao passo 2 mantendo
+os dados preenchidos anteriormente. 
+
 /*
   -----------------------------------------------------------------------------
 */
 
 Emitir relatório mais vendidos
+
+Sumário: Funcionário gera relatório dos medicamentos mais vendidos
+
+Atores: Funcionário
+
+Précondições: Fucnionário possuir login/senha e estar logado no sistema.
+
+Fluxo Principal:
+1.  Funcionário acessa opção para emitir relatório de medicamentos mais 
+vendidos.
+2.  Funcionário seleciona relatorio sem filtro ou filtrado por data.
+3.  Sistema busca na base de dados todos os medicamentos com vendas maior que 1 
+respeitando o filtro selecionado e retorna de forma ordenada do maior para o 
+menor.
+4.  Sistema gera relatorio em arquivo .pdf com o resultado da busca e exibe em 
+tela.
+5.  Funcionário imprime relatorio e caso de uso termina.
+
+Fluxo Alternativo (2): Funcionário cancela a operação
+A1.  O Funcionário desiste de gerar o relatorio, para isso cancela a operação e
+caso de uso termina.
+
+Fluxo Alternativo (5): Funcionário não deseja imprimir.
+B1.  O Funcionário não deseja imprimeir o resultado, somente visualiza-lo. Para
+isso cancela a impressão e caso de uso termina.
 
 /*
   -----------------------------------------------------------------------------
