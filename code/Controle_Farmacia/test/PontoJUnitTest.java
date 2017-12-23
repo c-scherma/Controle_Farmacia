@@ -1,4 +1,4 @@
-import aux.Funcionario;
+import misc.Funcionario;
 import entity.Ponto;
 import java.util.Date;
 import org.junit.Test;

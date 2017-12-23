@@ -1,8 +1,8 @@
 package entity;
 
-import aux.Medicamento;
-import aux.ClienteControlado;
-import aux.Cliente;
+import misc.Medicamento;
+import misc.ClienteControlado;
+import misc.Cliente;
 import java.util.ArrayList;
 import java.util.Date;
 

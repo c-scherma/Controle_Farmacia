@@ -1,6 +1,6 @@
 package entity;
 
-import aux.Funcionario;
+import misc.Funcionario;
 import java.util.Date;
 
 public class Ponto {

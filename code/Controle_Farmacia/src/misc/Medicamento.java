@@ -1,4 +1,4 @@
-package aux;
+package misc;
 
 public class Medicamento {
     private String nome;

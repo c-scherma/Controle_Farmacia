@@ -1,6 +1,6 @@
-package aux;
+package misc;
 
-import aux.Cliente;
+import misc.Cliente;
 import java.util.Date;
 
 public class ClienteControlado extends Cliente {
